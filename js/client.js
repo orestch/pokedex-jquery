@@ -39,31 +39,42 @@ $(document).ready(function() {
 
 // Get info from PokeAPI about particular pokemon
 function getPokemon($id) {
-	$.getJSON( 'https://pokeapi.co/api/v1/pokemon/' + $id, function( data ) {
-		var pokeTypes = [];
+	$.ajax({
+		type: 'get',
+		url: 'https://pokeapi.co/api/v1/pokemon/' + $id + '/',
+		crossDomain: true,
+		cache: false,
+		dataType: 'json',
+		contentType: 'application/json; charset=UTF-8',
+		success: function(data, textStatus, xhr) {
+			var pokeTypes = [];
 
-		$.each(data.types, function(key, val) {
-			pokeTypes.push(val.name);
-		})
-		console.log(pokeTypes);
+			$.each(data.types, function(key, val) {
+				pokeTypes.push(val.name);
+			})
 
-		$('.avatar-big img').first().attr('src', 'img/pokemon/' + data.pkdx_id + '.png');
+			$('.avatar-big img').first().attr('src', 'img/pokemon/' + data.pkdx_id + '.png');
 
-		$('.type').text(pokeTypes.join("  "));
-		$('.pokemon-name').text(data.name);
-		$('.attack').text(data.attack);
-		$('.defense').text(data.defense);
-		$('.hp').text(data.hp);
-		$('.sp_atk').text(data.sp_atk);
-		$('.sp_def').text(data.sp_def);
-		$('.speed').text(data.speed);
-		$('.weight').text(data.weight);
-		$('.moves').text(data.moves.length);
-		if ($('.pokemon').is(':hidden')) {
-			$('.pokemon').show();
-		} 
-		$('.loader').hide();
-	});
+			$('.type').text(pokeTypes.join("  "));
+			$('.pokemon-name').text(data.name);
+			$('.attack').text(data.attack);
+			$('.defense').text(data.defense);
+			$('.hp').text(data.hp);
+			$('.sp_atk').text(data.sp_atk);
+			$('.sp_def').text(data.sp_def);
+			$('.speed').text(data.speed);
+			$('.weight').text(data.weight);
+			$('.moves').text(data.moves.length);
+			if ($('.pokemon').is(':hidden')) {
+				$('.pokemon').show();
+			} 
+			$('.loader').hide();
+		},
+		error: function (xhr, textStatus, errorThrown) {
+			console.log(errorThrown);
+		}});
+
+
 }
 
 // Get Pokemon items
