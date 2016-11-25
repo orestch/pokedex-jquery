@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PokeDex App">
+  <meta name="author" content="Orest Chuguievets">
+  <title>PokeDex</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="app">    
+    <div class="container-fluid"> 
+     <!-- PAGE HEADER -->
+     <div class="row">
+      <div class="col-md-12">
+        <header class="page-header" id="logo">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <h1 class="logo">              
+                <img src="../../../img/logo.png" alt="logo" />
+              </h1>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+    <!-- END PAGE HEADER -->
+
+    <div class="row">
+      <div class="col-md-7 col-lg-6">
+        <div class="row pokeitems">
+          <span id="back"></span> 
+
+          <!-- FILTER -->
+          <div class="category-container">
+            <span id="all" class="all label label-default category-item">all</span>
+            <span id="poison" class="poison label label-default category-item">poison</span>
+            <span id="bug" class="bug label label-default category-item">bug</span>
+            <span id="flying" class="flying label label-default category-item">flying</span>
+            <span id="water" class="water label label-default category-item">water</span>
+            <span id="normal" class="normal label label-default category-item">normal</span>
+            <span id="electric" class="electric label label-default category-item">electric</span>
+            <span id="ground" class="ground label label-default category-item">ground</span>
+            <span id="fire" class="fire label label-default category-item">fire</span>
+            <span id="fairy" class="fairy label label-default category-item">fairy</span>
+            <span id="fighting" class="fighting label label-default category-item">fighting</span>
+            <span id="psychic" class="psychic label label-default category-item">psychic</span>
+            <span id="ghost" class="ghost label label-default category-item">ghost</span>
+            <span id="ice" class="ice label label-default category-item">ice</span>
+            <span id="grass" class="grass label label-default category-item">grass</span>
+          </div>
+          <!-- END FILTER -->
+
+          <!-- POKEITEMS -->
+          <div class="col-md-12 cf"> 
+            <a href="#top" id="pokeitems-wrapper" class="cf">
+            </a>
+          </div>   
+          <!-- END POKEITEMS --> 
+        </div>
+
+        <div class="row">
+          <!-- LOAD MORE BUTTON -->
+          <div class="btn-more">
+            <div>        
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <button type="button" class="btn btn-primary">Load More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END LOAD MORE BUTTON -->
+        </div>
+      </div> 
+
+      <div class="col-md-5">
+       <div class="pokemon-wrapper">        
+        <span id="top"></span>  
+        <div class="pokemon-wrapper" style="">
+          <!-- LOADER -->
+          <div class="loader">
+            <div class="loader-indicator" >
+              <div>
+                <span>loading pokemon</span>
+                <span class="loader-wrapper" >
+                  <span class="loader-dot">.</span>
+                  <span class="loader-dot">.</span>
+                  <span class="loader-dot">.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- END LOADER -->
+
+          <!-- POKEMON ITEM -->
+          <section class="pokemon">
+            <a class="back" href="#back">Back to pokemons list</a>
+            <p class="avatar-big">
+              <img src="img/pokemon/0.png" height="96" width="96" />
+            </p>
+            <h2 class="pokemon-name">{name}</h2>
+            <table class="table table-hover skills">
+              <tbody>
+                <tr>
+                  <td>Type</td>
+                  <td class="type">
+                    {types}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Attack</td><td class="attack">{attack}</td>
+                </tr>
+                <tr>
+                  <td>Defense</td><td class="defense">{defense}</td>
+                </tr>
+                <tr>
+                  <td>HP</td><td class="hp">{hp}</td>
+                </tr>
+                <tr>
+                  <td>SP Attack</td><td class="sp_atk">{sp_atk}</td>
+                </tr>
+                <tr>
+                  <td>SP Defense</td><td class="sp_def">{sp_def}</td>
+                </tr>
+                <tr>
+                  <td>Speed</td><td class="speed">{speed}</td>
+                </tr>
+                <tr>
+                  <td>Weight</td><td class="weight">{weight}</td>
+                </tr>
+                <tr>
+                  <td>Total moves</td>
+                  <td class="moves">{moves}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- END POKEMON ITEM -->
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+</div>
+</div>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>
