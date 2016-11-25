@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 // Get info from PokeAPI about particular pokemon
 function getPokemon($id) {
-	$.getJSON( 'http://pokeapi.co/api/v1/pokemon/' + $id, function( data ) {
+	$.getJSON( 'https://pokeapi.co/api/v1/pokemon/' + $id, function( data ) {
 		var pokeTypes = [];
 
 		$.each(data.types, function(key, val) {
