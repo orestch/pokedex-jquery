@@ -68,7 +68,7 @@ function getPokemon($id) {
 
 // Get Pokemon items
 function getPokemonItems($from, $to) {
-	$.getJSON( '/js/data.json', function( data ) {
+	$.getJSON( 'js/data.json', function( data ) {
 		var items = [];
 		$.each( data.objects.slice($from, $to), function( key, val ) {
 			var types = [];
