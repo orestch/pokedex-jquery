@@ -20,11 +20,12 @@
      <!-- PAGE HEADER -->
      <div class="row">
       <div class="col-md-12">
-        <header class="page-header" id="logo">
+        <header class="page-header">
           <div class="row">
             <div class="col-lg-12 col-md-12">
-              <h1 class="logo">              
-                <img src="img/logo.png" alt="logo" />
+              <h1 class="logo">   
+                <a href="/index.html"><span class="section-title">Pokedex</span>  
+                  <img src="img/logo.png" alt="Pokedex Logo" /></a>
               </h1>
             </div>
           </div>
@@ -55,14 +56,18 @@
             <span id="ghost" class="ghost label label-default category-item">ghost</span>
             <span id="ice" class="ice label label-default category-item">ice</span>
             <span id="grass" class="grass label label-default category-item">grass</span>
+
+            <p class="message">No items to display :-(</p>
           </div>
           <!-- END FILTER -->
 
           <!-- POKEITEMS -->
-          <div class="col-md-12 cf"> 
+          <section class="col-md-12 cf"> 
+
             <a href="#top" id="pokeitems-wrapper" class="cf">
+              <h2 class="section-title">Pokemons</h2>
             </a>
-          </div>   
+          </section>   
           <!-- END POKEITEMS --> 
         </div>
 
@@ -101,48 +106,49 @@
           <!-- END LOADER -->
 
           <!-- POKEMON ITEM -->
-          <section class="pokemon">
+          <article class="pokemon">
+            <h2 class="section-title">Pokemon</h2>
             <a class="back" href="#back">Back to pokemons list</a>
             <p class="avatar-big">
-              <img src="img/pokemon/0.png" height="96" width="96" />
+              <img src="img/pokemon/0.png" height="96" width="96" alt="Pokemon Avatar"/>
             </p>
-            <h2 class="pokemon-name">{name}</h2>
+            <h3 class="pokemon-name">No pokemon item has been loaded yet</h3>
             <table class="table table-hover skills">
               <tbody>
                 <tr>
                   <td>Type</td>
                   <td class="type">
-                    {types}
+                    &nbsp;
                   </td>
                 </tr>
                 <tr>
-                  <td>Attack</td><td class="attack">{attack}</td>
+                  <td>Attack</td><td class="attack">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>Defense</td><td class="defense">{defense}</td>
+                  <td>Defense</td><td class="defense">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>HP</td><td class="hp">{hp}</td>
+                  <td>HP</td><td class="hp">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>SP Attack</td><td class="sp_atk">{sp_atk}</td>
+                  <td>SP Attack</td><td class="sp_atk">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>SP Defense</td><td class="sp_def">{sp_def}</td>
+                  <td>SP Defense</td><td class="sp_def">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>Speed</td><td class="speed">{speed}</td>
+                  <td>Speed</td><td class="speed">&nbsp;</td>
                 </tr>
                 <tr>
-                  <td>Weight</td><td class="weight">{weight}</td>
+                  <td>Weight</td><td class="weight">&nbsp;</td>
                 </tr>
                 <tr>
                   <td>Total moves</td>
-                  <td class="moves">{moves}</td>
+                  <td class="moves">&nbsp;</td>
                 </tr>
               </tbody>
             </table>
-          </section>
+          </article>
           <!-- END POKEMON ITEM -->
         </div>
       </div>
@@ -151,8 +157,8 @@
 </div>
 
 </div>
-</div>  
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="js/client.js"></script>
+<script src="js/client.min.js"></script>
 </body>
 </html>
